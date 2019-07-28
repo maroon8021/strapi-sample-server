@@ -1,0 +1,29 @@
+{
+  "connection": "default",
+  "collectionName": "articles",
+  "info": {
+    "name": "article",
+    "description": "sample content"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "comment": ""
+  },
+  "attributes": {
+    "Title": {
+      "unique": true,
+      "required": true,
+      "type": "string"
+    },
+    "Content": {
+      "required": true,
+      "type": "text"
+    },
+    "MainImage": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload"
+    }
+  }
+}
